@@ -64,4 +64,14 @@
 <section id="tools" class="page"><div class="eyebrow">KIT DE TRABAJO</div><h2>Herramientas SST</h2><div class="cards"><article class="card"><div class="icon">🔎</div><h3>Inspección de seguridad</h3><p>Verifica orden, aseo, señalización, máquinas, herramientas y EPP.</p></article><article class="card"><div class="icon">🧾</div><h3>Matriz legal</h3><p>Organiza requisitos aplicables, responsables, evidencias y evaluación de cumplimiento.</p></article><article class="card"><div class="icon">🧍</div><h3>Ergonomía</h3><p>Observa posturas, movimientos repetitivos y manipulación manual de cargas.</p></article><article class="card"><div class="icon">🚨</div><h3>Emergencias</h3><p>Identifica amenazas, recursos, rutas de evacuación y preparación.</p></article><article class="card"><div class="icon">👥</div><h3>Participación</h3><p>Estudia COPASST, Comité de Convivencia y participación de trabajadores.</p></article><article class="card"><div class="icon">🦺</div><h3>EPP</h3><p>Relaciona el equipo de protección con el peligro y la tarea.</p></article></div></section>
 </main><footer>LUISINHOSST <span>Versión inicial · Uso educativo</span></footer>
 <script src="app.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(function(error) {
+        console.error("Error al registrar Service Worker:", error);
+      });
+  });
+}
+  </script>
 </body></html>
