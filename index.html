@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827"><meta name="description" content="LUISINHOSST - Aprende y gestiona Seguridad y Salud en el Trabajo">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+<title>LUISINHOSST</title>
+</head>
+<body>
+<header class="top"><div class="brand"><div class="logo">LS</div><div><b>LUISINHOSST</b><small>Tu espacio de aprendizaje SST</small></div></div><button id="install" class="ghost" hidden>Instalar app</button></header>
+<main>
+<section class="hero"><div class="eyebrow">SEGURIDAD Y SALUD EN EL TRABAJO</div><h1>Aprende. Identifica.<br><span>Previene.</span></h1><p>Una caja de herramientas para estudiar SST y llevar la prevención a la práctica.</p><div class="hero-actions"><button class="primary" data-go="academy">Comenzar a aprender</button><button class="secondary" data-go="matrix">Crear matriz</button></div><div class="stats"><div><b>01</b><small>Aprende desde cero</small></div><div><b>02</b><small>Practica con casos</small></div><div><b>03</b><small>Aplica herramientas</small></div></div></section>
+<nav class="tabs" aria-label="Navegación"><button class="tab active" data-tab="home">Inicio</button><button class="tab" data-tab="academy">Academia</button><button class="tab" data-tab="matrix">Matriz GTC 45</button><button class="tab" data-tab="library">Normativa</button><button class="tab" data-tab="legal">Matriz legal</button><button class="tab" data-tab="tools">Herramientas</button></nav>
+<section id="home" class="page active"><div class="section-head"><div><div class="eyebrow">TU PANEL</div><h2>¿Qué vamos a trabajar hoy?</h2></div></div><div class="cards">
+<article class="card feature" data-open="academy"><div class="icon">🎓</div><h3>Academia SST</h3><p>Lecciones cortas, ejemplos cotidianos y preguntas para comprobar lo aprendido.</p><span class="link">Explorar academia →</span></article>
+<article class="card" data-open="matrix"><div class="icon">⚠️</div><h3>Matriz de peligros</h3><p>Identifica peligros, estima el riesgo y plantea controles.</p><span class="link">Abrir herramienta →</span></article>
+<article class="card" data-open="library"><div class="icon">📚</div><h3>Normativa colombiana</h3><p>Consulta normas clave y accede a fuentes oficiales.</p><span class="link">Consultar normas →</span></article>
+<article class="card" data-open="tools"><div class="icon">🧰</div><h3>Formatos y herramientas</h3><p>Listas de chequeo, inspecciones y conceptos esenciales.</p><span class="link">Ver herramientas →</span></article>
+</div><div class="notice"><b>Importante</b><p>La normativa cambia. Antes de aplicar un requisito en una empresa, verifica siempre su vigencia y texto oficial.</p></div></section>
+<section id="academy" class="page"><div class="eyebrow">APRENDE A TU RITMO</div><h2>Academia SST</h2><p class="muted">Una ruta progresiva: fundamentos, identificación de peligros y gestión del SG-SST.</p><div class="lesson-list">
+<article class="lesson"><div class="lesson-num">01</div><div><b>Fundamentos de SST</b><p>Qué es peligro, qué es riesgo y cómo se previenen los daños.</p><button class="text-btn" data-lesson="fundamentos">Abrir lección →</button></div><span class="tag">Básico</span></article>
+<article class="lesson"><div class="lesson-num">02</div><div><b>Identificación de peligros</b><p>Clasificación de peligros y observación de tareas.</p><button class="text-btn" data-lesson="peligros">Abrir lección →</button></div><span class="tag">Básico</span></article>
+<article class="lesson"><div class="lesson-num">03</div><div><b>Evaluación del riesgo – GTC 45</b><p>ND, NE, NP, NC y nivel de riesgo.</p><button class="text-btn" data-lesson="gtc">Abrir lección →</button></div><span class="tag">Intermedio</span></article>
+<article class="lesson"><div class="lesson-num">04</div><div><b>Jerarquía de controles</b><p>Eliminar, sustituir, controles de ingeniería, administrativos y EPP.</p><button class="text-btn" data-lesson="controles">Abrir lección →</button></div><span class="tag">Intermedio</span></article>
+</div><div id="lesson-detail" class="detail" hidden></div><div class="quiz card"><div class="eyebrow">COMPRUEBA LO APRENDIDO</div><h3>Mini evaluación</h3><p>Un trabajador se resbala en un piso mojado y cae, pero no presenta lesión. ¿Qué ocurrió?</p><div class="answers"><button data-answer="a">Accidente de trabajo con lesión</button><button data-answer="b">Incidente sin lesión</button><button data-answer="c">Enfermedad laboral</button></div><p id="quiz-result" class="muted" aria-live="polite"></p></div></section>
+<section id="matrix" class="page"><div class="eyebrow">HERRAMIENTA PRÁCTICA</div><h2>Matriz de peligros · GTC 45</h2><p class="muted">Registra una situación, realiza una valoración ilustrativa y define controles. Los valores deben justificarse con observación real del trabajo.</p>
+<div class="form-grid">
+<label>Empresa / lugar<input id="company" placeholder="Ej. Supermercado"></label><label>Área<input id="area" placeholder="Ej. Carnicería"></label>
+<label>Actividad<input id="activity" placeholder="Ej. Corte y despacho"></label><label>Tarea<input id="task" placeholder="Ej. Cortar carne"></label>
+<label class="wide">Peligro identificado<input id="hazard" placeholder="Ej. Contacto con cuchillo afilado"></label>
+<label>Clasificación<select id="category"><option>Condiciones de seguridad - mecánico</option><option>Locativo</option><option>Biomecánico</option><option>Físico</option><option>Químico</option><option>Biológico</option><option>Psicosocial</option><option>Fenómenos naturales</option></select></label>
+<label>Personas expuestas<input id="exposed" placeholder="Ej. Carniceros, auxiliares"></label>
+<label>Posibles consecuencias<input id="consequence" placeholder="Ej. Cortes y heridas"></label>
+<label class="wide">Controles existentes<input id="existing" placeholder="Ej. Guarda de máquina, capacitación, señalización"></label>
+<label>ND · Nivel de deficiencia<select id="nd"><option value="10">10 - Muy alto</option><option value="6" selected>6 - Alto</option><option value="2">2 - Medio</option><option value="0">0 - Bajo</option></select></label>
+<label>NE · Nivel de exposición<select id="ne"><option value="4">4 - Continua</option><option value="3" selected>3 - Frecuente</option><option value="2">2 - Ocasional</option><option value="1">1 - Esporádica</option></select></label>
+<label>NC · Nivel de consecuencia<select id="nc"><option value="100">100 - Mortal o catastrófico</option><option value="60">60 - Muy grave</option><option value="25" selected>25 - Grave</option><option value="10">10 - Leve</option></select></label>
+<label>Peor consecuencia<input id="worst" placeholder="Ej. Lesión grave en mano"></label>
+<label>Requisito legal asociado<input id="legal-ref" placeholder="Norma / artículo, si aplica"></label>
+<label class="wide">Controles propuestos por jerarquía<textarea id="controls" rows="3" placeholder="Eliminación, sustitución, ingeniería, administrativos y EPP..."></textarea></label>
+</div><button id="evaluate" class="primary">Calcular valoración</button><div id="risk-result" class="risk-result" hidden aria-live="polite"></div><div class="matrix-actions"><button id="save-row" class="secondary" disabled>Guardar registro</button><button id="export" class="ghost">Descargar registros CSV</button></div>
+<h3 class="subhead">Registros guardados en este dispositivo</h3><div id="records" class="records"><p class="muted">Aún no hay registros.</p></div>
+<div class="notice"><b>Nota técnica</b><p>La GTC 45 utiliza NP = ND × NE y NR = NP × NC. Esta herramienta es educativa: la clasificación final, aceptabilidad y medidas deben contrastarse con la guía completa, la realidad del puesto y los criterios de la organización.</p></div></section>
+<section id="library" class="page"><div class="eyebrow">CONSULTA Y VERIFICA</div><h2>Normativa colombiana</h2><p class="muted">Punto de partida para estudiar el marco del SG-SST. Los enlaces llevan a fuentes institucionales o repositorios normativos.</p><div class="norm-list">
+<article><b>Decreto 1072 de 2015</b><p>Decreto Único Reglamentario del Sector Trabajo. Incluye el marco del SG-SST.</p><a href="https://www.cancilleria.gov.co/sites/default/files/Normograma/docs/decreto_1072_2015.htm" target="_blank" rel="noopener">Consultar texto →</a></article>
+<article><b>Resolución 0312 de 2019</b><p>Estándares mínimos del Sistema de Gestión de SST.</p><a href="https://www.mintrabajo.gov.co/" target="_blank" rel="noopener">Ministerio del Trabajo →</a></article>
+<article><b>Resolución 908 de 2025</b><p>Requisitos y procedimiento relacionados con licencias de SST.</p><a href="https://www.minsalud.gov.co/Normatividad_Nuevo/Resolucion%20No%20908%20de%202025.pdf" target="_blank" rel="noopener">Consultar PDF oficial →</a></article>
+<article><b>Resolución 1843 de 2025</b><p>Reglamentación sobre evaluaciones médicas ocupacionales y otras disposiciones.</p><a href="https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_mtra_1843_2025.htm" target="_blank" rel="noopener">Consultar texto →</a></article>
+<article><b>Resolución 3461 de 2025</b><p>Marco normativo del Comité de Convivencia Laboral. Verifica texto y vigencia antes de aplicarla.</p><a href="https://www.mintrabajo.gov.co/" target="_blank" rel="noopener">Buscar en MinTrabajo →</a></article>
+</div><div class="notice"><b>Fuentes para ampliar</b><p><a href="https://www.suin-juriscol.gov.co/" target="_blank" rel="noopener">SUIN-Juriscol</a> · <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/" target="_blank" rel="noopener">Gestor Normativo</a> · <a href="https://www.fondoriesgoslaborales.gov.co/" target="_blank" rel="noopener">Fondo de Riesgos Laborales</a></p></div></section>
+<section id="legal" class="page"><div class="eyebrow">GESTIÓN DE REQUISITOS</div><h2>Matriz legal SST</h2><p class="muted">Registra requisitos aplicables, evidencia de cumplimiento, responsables y acciones pendientes. Verifica siempre la vigencia normativa en la fuente oficial.</p>
+<div class="form-grid">
+<label class="wide">Requisito / norma<input id="law-name" placeholder="Ej. Decreto 1072 de 2015, artículo 2.2.4.6..."></label>
+<label>Entidad emisora<input id="law-entity" placeholder="Ej. Ministerio del Trabajo"></label>
+<label>Tema<select id="law-topic"><option>SG-SST</option><option>Estándares mínimos</option><option>Medicina preventiva</option><option>Higiene y seguridad industrial</option><option>Comités y participación</option><option>Emergencias</option><option>Trabajo en alturas</option><option>Otro</option></select></label>
+<label>Responsable<input id="law-owner" placeholder="Cargo o área responsable"></label>
+<label>Estado<select id="law-status"><option>Pendiente</option><option>En proceso</option><option>Cumple</option><option>No aplica (justificar)</option></select></label>
+<label class="wide">Evidencia / documento<input id="law-evidence" placeholder="Ej. Política firmada, acta, registro de capacitación"></label>
+<label class="wide">Acción / observaciones<textarea id="law-action" rows="2" placeholder="Qué falta, cómo se cumple o por qué no aplica..."></textarea></label>
+</div><button id="law-save" class="primary">Guardar requisito</button><button id="law-export" class="secondary">Exportar matriz legal CSV</button>
+<h3 class="subhead">Requisitos registrados</h3><div id="law-records" class="records"><p class="muted">Aún no hay requisitos registrados.</p></div>
+<div class="notice"><b>Importante</b><p>La matriz legal debe construirse según la actividad económica, peligros, tamaño, procesos y requisitos aplicables. Esta herramienta no determina automáticamente la aplicabilidad ni certifica cumplimiento.</p></div>
+</section>
+<section id="tools" class="page"><div class="eyebrow">KIT DE TRABAJO</div><h2>Herramientas SST</h2><div class="cards"><article class="card"><div class="icon">🔎</div><h3>Inspección de seguridad</h3><p>Verifica orden, aseo, señalización, máquinas, herramientas y EPP.</p></article><article class="card"><div class="icon">🧾</div><h3>Matriz legal</h3><p>Organiza requisitos aplicables, responsables, evidencias y evaluación de cumplimiento.</p></article><article class="card"><div class="icon">🧍</div><h3>Ergonomía</h3><p>Observa posturas, movimientos repetitivos y manipulación manual de cargas.</p></article><article class="card"><div class="icon">🚨</div><h3>Emergencias</h3><p>Identifica amenazas, recursos, rutas de evacuación y preparación.</p></article><article class="card"><div class="icon">👥</div><h3>Participación</h3><p>Estudia COPASST, Comité de Convivencia y participación de trabajadores.</p></article><article class="card"><div class="icon">🦺</div><h3>EPP</h3><p>Relaciona el equipo de protección con el peligro y la tarea.</p></article></div></section>
+</main><footer>LUISINHOSST <span>Versión inicial · Uso educativo</span></footer>
+<script src="app.js"></script>
+</body></html>

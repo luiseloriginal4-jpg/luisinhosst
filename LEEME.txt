@@ -1,0 +1,28 @@
+LUISINHOSST V2 - proyecto PWA preparado para publicación
+========================================================
+
+Incluye:
+- Academia SST con lecciones y mini evaluación.
+- Matriz de peligros didáctica basada en la estructura GTC 45:
+  proceso/lugar, área, actividad, tarea, peligro, clasificación, personas expuestas,
+  consecuencias, controles existentes y propuestos, ND, NE, NP, NC y NR.
+- Guardado local y exportación CSV de la matriz de peligros.
+- Matriz legal editable con norma/requisito, entidad, tema, responsable,
+  estado, evidencia y acciones; guardado local y exportación CSV.
+- Biblioteca inicial de normas y enlaces de consulta.
+- Interfaz responsive y archivos de manifiesto/service worker para PWA.
+
+Instalación en Android:
+1. Esta carpeta debe publicarse en un hosting HTTPS (por ejemplo, un hosting estático).
+2. Abre la URL publicada en Google Chrome desde Android.
+3. En el menú de Chrome elige "Instalar aplicación" o "Añadir a pantalla principal".
+4. La PWA puede abrirse como aplicación. La caché permite uso básico sin conexión tras la primera carga.
+
+No es un APK Android nativo. Para generar un APK hace falta empaquetar esta PWA (por ejemplo con Bubblewrap/TWA o Capacitor), configurar firma y compilar en un entorno Android con SDK/Gradle.
+
+Avisos:
+- Los registros se guardan solo en el almacenamiento local del navegador/dispositivo; no se sincronizan.
+- La valoración de riesgo es una ayuda educativa y no reemplaza la GTC 45 completa ni el juicio profesional.
+- La matriz legal no identifica automáticamente todos los requisitos aplicables.
+- La biblioteca normativa es inicial, no exhaustiva; verificar vigencia, modificaciones y derogatorias en fuentes oficiales.
+- No contiene anuncios ni rastreadores.
